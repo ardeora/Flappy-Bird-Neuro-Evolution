@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <style> 
+    body {padding: 0; margin: 0; background: #454753} 
+    * {font-family: 'Arial'; color: white; font-size: 11px;} p {margin-top: 0;}
+    #btn-holder {
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+    button {
+      outline: none;
+      border: none;
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      border-radius: 100px;
+      cursor: pointer;
+      color: #ececec;
+    }
+
+    #imgToggle {
+      background: #1684FF;
+    }
+
+    #imgToggle:hover {
+      background: #0a68d3;
+    }
+
+    #play-best {
+      background: #f1953f;
+    }
+
+    #play-best:hover {
+      background: #e4842b;
+    }
+
+    #play-best[disabled] {
+      background: #a05819;
+      cursor: not-allowed;
+    }
+
+    #reset {
+      background: #E1184B;
+    }
+
+    #reset:hover {
+      background: #b90a36;
+    }
+
+    #slider-cont {
+      margin-top: 20px;
+      margin-left: 105px;
+    }
+
+    .slider {
+      position: relative;
+      top: -2px;
+      -webkit-appearance: none;
+      height: 5px;
+      background: #d3d3d3;
+      outline: none;
+      border-radius: 20px;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 20px;
+      background: #48C496;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 15px;
+      height: 15px;
+      background: #48C496;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    #time {
+      margin-top: 5px;
+      width: 360px;
+      text-align: center;
+      font-size: 12px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div id="flappy-world"></div>
+    <div id="btn-holder">
+        <button id='imgToggle'>Toggle Images</button>
+        <button id='play-best'>Play Best</button>
+        <button id='reset'>Reset</button>
+        
+    </div>
+
+    <div id="slider-cont">
+      <span>1</span>
+      <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+      <span>100</span>
+    </div>
+    <p id="time">Time Speed: 2</p>
+    
+    <script src="p5/p5.js"></script>
+    <script src="p5/p5.dom.js"></script>
+    <script src="matrix.js"></script>
+    <script src="nn.js"></script>
+    <script src="pipes.js"></script>
+    <script src="bird.js"></script>
+    <script src="population.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
